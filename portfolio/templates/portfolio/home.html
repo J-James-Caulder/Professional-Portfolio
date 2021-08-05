@@ -1,0 +1,50 @@
+{% extends 'portfolio/base.html' %}
+
+{% block content %}
+
+  {% load static %}
+
+  <br>
+  <div class="row justify-content-center my-3">
+    <div class="col-4">
+      <h1 id="hometext" class="font-weight-bold">J. James Caulder</h1>
+      <br>
+      <img src="{% static 'portfolio/India Headshot.jpg' %}" height=300, width=300 class="img-fluid">
+    </div>
+   </div>
+
+   <br>
+   <h5 class="row justify-content-center my-3">
+     Click below to check out some of the things I've been working on.
+   </h5>
+
+  <br>
+  <hr>
+
+  <div class="container">
+    <div class="row text-left">
+      <div class="col">
+        <a href="{% url 'FinishedProjects' %}">
+          <h2 class="mt-4">Finished Works</h2>
+        </a>
+      </div>
+      <div class="col">
+        <a href="{% url 'UpcomingProjects' %}">
+          <h2 class="mt-4">Upcoming Works</h2>
+        </a>
+      </div>
+    </div>
+    <div class="row justify-content-evenly">
+      <div class="col">
+        <a href="{% url 'FinishedProjects' %}">
+          <img src="{% static 'portfolio/AShadowingFlame.jpeg' %}" class="img-fluid mb-2" height=450, width=300>
+        </a>
+      </div>
+      <div class="col">
+        <a href="{% url 'UpcomingProjects' %}">
+          <img src="{% static 'portfolio/Utah Landscape.jpg' %}" class="img-fluid mb-2" height=300, width=450>
+        </a>
+      </div>
+    </div>
+  </div>
+{% endblock %}

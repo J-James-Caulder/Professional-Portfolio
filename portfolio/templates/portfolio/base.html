@@ -1,0 +1,46 @@
+
+{% load static %}
+<div class="p-3 mb-2 bg-light text-dark">
+  <!doctype html>
+  <html lang="en">
+
+    <head>
+      <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+       <link rel="stylesheet" href="{% static "portfolio/custom.css" %}">
+
+      <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+
+      <link rel="icon" type="image/png" href="{% static "portfolio/Ring of Fire.png" %}">
+
+      <title>J James Caulder</title>
+    </head>
+    <body>
+      <ul class="nav nav-light bg-secondary justify-content-end">
+        <li class="nav-item">
+          <a class="nav-link active nav-light bg-light" aria-current="page" href="{% url 'home' %}">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link nav-light bg-light" href="{% static 'portfolio/VO Resume.docx' %}">Resume</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link nav-light bg-light" href="https://www.linkedin.com/in/j-james-caulder/" target="_blank">LinkedIn</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link nav-light bg-light" href="{% url 'Contact' %}">Contact Me</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+        </li>
+      </ul>
+
+  {% block content %}{% endblock %}
+
+    </body>
+  </html>
+</div>
