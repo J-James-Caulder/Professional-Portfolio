@@ -4,8 +4,10 @@
 <br>
 <h1 class="text-center">Here's some of my audio clips. Enjoy.</h1>
 <br>
+<h4>{{ project.title }}</h4>
 {% for project in projects %}
-<audio src="{{ project.sample.url }}" controls>{{ project.title }}</audio>
+<h3>{{ project.title }}</h3>
+<audio src="{{ project.sample.url }}" controls></audio>
 
 {% endfor %}
 
