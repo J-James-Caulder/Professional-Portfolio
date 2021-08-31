@@ -22,7 +22,7 @@
   <hr>
 
   <div class="container">
-    <div class="row text-left">
+    <div class="row text-center">
       <div class="col">
         <a href="{% url 'FinishedProjects' %}">
           <h2 class="mt-4">Finished Works</h2>
@@ -31,6 +31,11 @@
       <div class="col">
         <a href="{% url 'UpcomingProjects' %}">
           <h2 class="mt-4">Upcoming Works</h2>
+        </a>
+      </div>
+      <div class="col">
+        <a href="{% url 'Demo' %}">
+          <h2 class="mt-4">Demos</h2>
         </a>
       </div>
     </div>
@@ -42,9 +47,16 @@
       </div>
       <div class="col">
         <a href="{% url 'UpcomingProjects' %}">
-          <img src="{% static 'portfolio/Utah Landscape.jpg' %}" class="img-fluid mb-2" height=300, width=450>
+          <img src="{% static 'portfolio/download.jpg' %}" class="img-fluid mb-2" height=300, width=450>
+        </a>
+      </div>
+      <div class="col">
+        <a href="{% url 'Demo' %}">
+          <img src="{% static 'portfolio/Audio.jpeg' %}" class="img-fluid mb-2" height=300, width=450>
         </a>
       </div>
     </div>
   </div>
+
+
 {% endblock %}
