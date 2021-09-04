@@ -28,3 +28,27 @@ class Finished(models.Model):
 
     def __str__(self):
         return self.title
+
+class Recording(models.Model):
+    title = models.CharField(max_length=50, blank=False)
+    Song = 'Song'
+    Audiobook = 'Audiobook'
+    Animation = 'Animation'
+    Commercials = 'Commercials'
+    Announcing = 'Announcing'
+    Audio_Work_Choices =  [
+        (Song, 'Song'),
+        (Audiobook, 'Audiobook'),
+        (Animation, 'Animation'),
+        (Commercials, 'Commercials'),
+        (Announcing, 'Announcing'),
+    ]
+    Audio_Work = models.CharField(
+        max_length=20,
+        choices=Audio_Work_Choices,
+        default=Animation,
+        )
+    sample = models.FileField(upload_to='portfolio/uploads/', blank=True)
+
+    def __str__(self):
+        return self.Audio_Work

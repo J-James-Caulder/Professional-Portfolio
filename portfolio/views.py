@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from .models import Project, Future, Finished
+from .models import Project, Future, Finished, Recording
 
 def home(request):
     projects = Project.objects.all()
@@ -21,5 +21,5 @@ def Contact(request):
     return render(request, 'portfolio/Contact.html')
 
 def Demo(request):
-    projects = Project.objects.all()
-    return render(request, 'portfolio/Demo.html', {'projects':projects})
+    recordings = Recording.objects.all()
+    return render(request, 'portfolio/Demo.html', {'recordings':recordings})

@@ -10,22 +10,24 @@
 <br>
 <div class="container">
   <div class="row">
+    {% for finished in finished %}
     <div class="col">
-      <a href="https://www.amazon.com/Shadowing-Flame-Elementalist-Novel-ebook/dp/B016TN6ZVE/ref=sr_1_1?dchild=1&keywords=a+shadowing+flame&qid=1628131029&sr=8-1" target="_blank">
-        <h4 class="font-weight-bold">A Shadowing Flame</h4>
+      <a href="{{ finished.url }}" target="_blank">
+        <h4 class="font-weight-bold">{{ finished.title }}</h4>
       </a>
     </div>
     <div class="col">
-      Hardcopy and E-book
+      {{ finished.platform }}
     </div>
   </div>
   <div class="row">
     <div class="col">
-      <img src="{% static 'portfolio/AShadowingFlame.jpeg' %}" height=200, width=150 class="img-thumbnail">
+      <img src="{{ finished.image }}" height=200, width=150 class="img-thumbnail">
     </div>
     <div class="col-10">
-      Royalty always seems to have so many tough choices, high up in the castle, with servants to wait on them. However, Princess Rose has never been one to want others to serve her. That's not the only thing that she wishes to change about her life--she has always been fascinated with magic, which has been outlawed in the kingdom. But when several shadowy figures seem to want the princess out of the picture, she has no choice but to leave her fate in the hands of a mysterious newcomer, whose very existence is forbidden.
+      {{ finished.description }}
     </div>
+    {% endfor %}
   </div>
 </div>
 

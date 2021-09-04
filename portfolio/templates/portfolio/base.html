@@ -21,27 +21,47 @@
       <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
       <meta name="msapplication-TileColor" content="#da532c">
       <meta name="theme-color" content="#ffffff">
-      
+
       <title>J James Caulder</title>
     </head>
     <body>
-      <ul class="nav nav-light bg-secondary justify-content-end">
-        <li class="nav-item">
-          <a class="nav-link active nav-light bg-light" aria-current="page" href="{% url 'home' %}">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link nav-light bg-light" href="{% static 'portfolio/VO Resume.pdf' %}">Resume</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link nav-light bg-light" href="https://www.linkedin.com/in/j-james-caulder/" target="_blank">LinkedIn</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link nav-light bg-light" href="{% url 'Contact' %}">Contact Me</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-        </li>
-      </ul>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="nav fixed-top nav-light bg-secondary justify-content-end">
+            <li class="nav-item">
+              <a class="nav-link active nav-light bg-light" aria-current="page" href="{% url 'home' %}">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-light bg-light" href="{% static 'portfolio/VO Resume.pdf' %}">Resume</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-light bg-light" href="https://www.linkedin.com/in/j-james-caulder/" target="_blank">LinkedIn</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-light bg-light" href="{% url 'Contact' %}">Contact Me</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle nav-light bg-light" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Projects</a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="{% url 'FinishedProjects' %}">Finished Works</a></li>
+                <li><a class="dropdown-item" href="{% url 'UpcomingProjects' %}">Upcoming Works</a></li>
+                <li><a class="dropdown-item" href="{% url 'Demo' %}">Demos</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <br>
 
   {% block content %}{% endblock %}
 

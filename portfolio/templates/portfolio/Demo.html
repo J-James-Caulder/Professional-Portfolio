@@ -10,4 +10,10 @@
 
 {% endfor %}
 
+{% for recording in recordings %}
+<h3>{{ recording.title }}</h3>
+<audio src="{{ recording.sample.url }}" controls></audio>
+
+{% endfor %}
+
 {% endblock %}
