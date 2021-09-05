@@ -4,16 +4,79 @@
 <br>
 <h1 class="text-center">Here's some of my audio clips. Enjoy.</h1>
 <br>
-{% for project in projects %}
-<h3>{{ project.title }}</h3>
-<audio src="{{ project.sample.url }}" controls></audio>
 
-{% endfor %}
-
-{% for recording in recordings %}
-<h3>{{ recording.title }}</h3>
-<audio src="{{ recording.sample.url }}" controls></audio>
-
+<div class='container-fluid'>
+  <div class="row">
+    <h2 class='col-12 justify-content-center'>Songs</h2>
+    <h6 class='col-12 text-light'></h6>
+    {% for recording in recordings %}
+    {% if recording.Audio_Work == 'Song' %}
+    <h6 class='col-1 text-light'></h6>
+    <h5 class='col-4'>{{ recording.title }}</h5>
+    <audio class='col-6' src="{{ recording.sample.url }}" controls></audio>
+    <h6 class='col-1 text-light'></h6>
+    <h6 class='col-12 text-light'></h6>
+    <br>
+    {% endif %}
+    {% endfor %}
+    <br>
+    <br>
+    <h2 class='col-12 justify-content-center'>Animation</h2>
+    <h6 class='col-12 text-light'></h6>
+    {% for recording in recordings %}
+    {% if recording.Audio_Work == 'Animation' %}
+    <h6 class='col-1 text-light'></h6>
+    <h5 class='col-4'>{{ recording.title }}</h5>
+    <audio class='col-6' src="{{ recording.sample.url }}" controls></audio>
+    <h6 class='col-1 text-light'></h6>
+    <h6 class='col-12 text-light'></h6>
+    <br>
+    {% endif %}
+    {% endfor %}
+    <br>
+    <br>
+    <h2 class='col-12 justify-content-center'>Audiobook</h2>
+    <h6 class='col-12 text-light'></h6>
+    {% for recording in recordings %}
+    {% if recording.Audio_Work == 'Audiobook' %}
+    <h6 class='col-1 text-light'</h6>
+    <h5 class='col-4'>{{ recording.title }}</h5>
+    <audio class='col-6' src="{{ recording.sample.url }}" controls></audio>
+    <h6 class='col-1 text-light'></h6>
+    <h6 class='col-12 text-light'></h6>
+    <br>
+    {% endif %}
+    {% endfor %}
+    <br>
+    <br>
+    <h2 class='col-12 justify-content-center'>Commercials</h2>
+    <h6 class='col-12 text-light'></h6>
+    {% for recording in recordings %}
+    {% if recording.Audio_Work == 'Commercials' %}
+    <h6 class='col-1 text-light'></h6>
+    <h5 class='col-4'>{{ recording.title }}</h5>
+    <audio class='col-6' src="{{ recording.sample.url }}" controls></audio>
+    <h6 class='col-1 text-light'></h6>
+    <h6 class='col-12 text-light'></h6>
+    <br>
+    {% endif %}
+    {% endfor %}
+    <br>
+    <br>
+    <h3 class='col-12 justify-content-center'>Announcer</h3>
+    <h6 class='col-12 text-light'></h6>
+    {% for recording in recordings %}
+    {% if recording.Audio_Work == 'Announcing' %}
+    <h6 class='col-1 text-light'></h6>
+    <h5 class='col-4'>{{ recording.title }}</h5>
+    <audio class='col-6' src="{{ recording.sample.url }}" controls></audio>
+    <h6 class='col-1 text-light'></h6>
+    <h6 class='col-12 text-light'></h6>
+    <br>
+    {% endif %}
+    <br>
+  </div>
+</div>
 {% endfor %}
 
 {% endblock %}
