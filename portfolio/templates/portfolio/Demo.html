@@ -5,22 +5,8 @@
 <h1 class="text-center">Here's some of my audio clips. Enjoy.</h1>
 <br>
 
-<div class='container-fluid'>
+<div class="container container-fluid">
   <div class="row">
-    <h2 class='col-12 justify-content-center'>Songs</h2>
-    <h6 class='col-12 text-light'></h6>
-    {% for recording in recordings %}
-    {% if recording.Audio_Work == 'Song' %}
-    <h6 class='col-1 text-light'></h6>
-    <h5 class='col-4'>{{ recording.title }}</h5>
-    <audio class='col-6' src="{{ recording.sample.url }}" controls></audio>
-    <h6 class='col-1 text-light'></h6>
-    <h6 class='col-12 text-light'></h6>
-    <br>
-    {% endif %}
-    {% endfor %}
-    <br>
-    <br>
     <h2 class='col-12 justify-content-center'>Animation</h2>
     <h6 class='col-12 text-light'></h6>
     {% for recording in recordings %}
@@ -34,7 +20,7 @@
     {% endif %}
     {% endfor %}
     <br>
-    <br>
+    <div><hr class="divider"></div>
     <h2 class='col-12 justify-content-center'>Audiobook</h2>
     <h6 class='col-12 text-light'></h6>
     {% for recording in recordings %}
@@ -48,7 +34,7 @@
     {% endif %}
     {% endfor %}
     <br>
-    <br>
+    <div><hr class="divider"></div>
     <h2 class='col-12 justify-content-center'>Commercials</h2>
     <h6 class='col-12 text-light'></h6>
     {% for recording in recordings %}
@@ -62,8 +48,8 @@
     {% endif %}
     {% endfor %}
     <br>
-    <br>
-    <h3 class='col-12 justify-content-center'>Announcer</h3>
+    <div><hr class="divider"></div>
+    <h2 class='col-12 justify-content-center'>Announcer</h2>
     <h6 class='col-12 text-light'></h6>
     {% for recording in recordings %}
     {% if recording.Audio_Work == 'Announcing' %}
@@ -72,11 +58,24 @@
     <audio class='col-6' src="{{ recording.sample.url }}" controls></audio>
     <h6 class='col-1 text-light'></h6>
     <h6 class='col-12 text-light'></h6>
+    {% endif %}
+    {% endfor %}
+    <br>
+    <div><hr class="divider"></div>
+    <h2 class='col-12 justify-content-center'>Songs</h2>
+    <h6 class='col-12 text-light'></h6>
+    {% for recording in recordings %}
+    {% if recording.Audio_Work == 'Song' %}
+    <h6 class='col-1 text-light'></h6>
+    <h5 class='col-4'>{{ recording.title }}</h5>
+    <audio class='col-6' src="{{ recording.sample.url }}" controls></audio>
+    <h6 class='col-1 text-light'></h6>
+    <h6 class='col-12 text-light'></h6>
     <br>
     {% endif %}
+    {% endfor %}
     <br>
   </div>
 </div>
-{% endfor %}
 
 {% endblock %}
