@@ -13,7 +13,7 @@
     {% if recording.Audio_Work == 'Animation' %}
     <h6 class='col-1 text-light'></h6>
     <h5 class='col-4'>{{ recording.title }}</h5>
-    <audio class='col-6' src="/{{ recording.sample.url }}" controls></audio>
+    <audio class='col-6' src="/{{ recording.sample }}" controls></audio>
     <h6 class='col-1 text-light'></h6>
     <h6 class='col-12 text-light'></h6>
     <br>
@@ -27,7 +27,7 @@
     {% if recording.Audio_Work == 'Audiobook' %}
     <h6 class='col-1 text-light'</h6>
     <h5 class='col-4'>{{ recording.title }}</h5>
-    <audio class='col-6' src="/{{ recording.sample.url }}" controls></audio>
+    <audio class='col-6' src="/{{ recording.sample }}" controls></audio>
     <h6 class='col-1 text-light'></h6>
     <h6 class='col-12 text-light'></h6>
     <br>
@@ -41,7 +41,7 @@
     {% if recording.Audio_Work == 'Commercials' %}
     <h6 class='col-1 text-light'></h6>
     <h5 class='col-4'>{{ recording.title }}</h5>
-    <audio class='col-6' src="/{{ recording.sample.url }}" controls></audio>
+    <audio class='col-6' src="/{{ recording.sample }}" controls></audio>
     <h6 class='col-1 text-light'></h6>
     <h6 class='col-12 text-light'></h6>
     <br>
@@ -55,7 +55,7 @@
     {% if recording.Audio_Work == 'Announcing' %}
     <h6 class='col-1 text-light'></h6>
     <h5 class='col-4'>{{ recording.title }}</h5>
-    <audio class='col-6' src="/{{ recording.sample.url }}" controls></audio>
+    <audio class='col-6' src="/{{ recording.sample }}" controls></audio>
     <h6 class='col-1 text-light'></h6>
     <h6 class='col-12 text-light'></h6>
     {% endif %}
@@ -68,7 +68,7 @@
     {% if recording.Audio_Work == 'Song' %}
     <h6 class='col-1 text-light'></h6>
     <h5 class='col-4'>{{ recording.title }}</h5>
-    <audio class='col-6' src="/{{ recording.sample.url }}" controls></audio>
+    <audio class='col-6' src="/{{ recording.sample }}" controls></audio>
     <h6 class='col-1 text-light'></h6>
     <h6 class='col-12 text-light'></h6>
     <br>
