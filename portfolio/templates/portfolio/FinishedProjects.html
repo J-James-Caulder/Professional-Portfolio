@@ -12,7 +12,7 @@
   <div class="row">
     {% for finished in finished %}
     <div class="col">
-      <a href="{{ finished.url }}" target="_blank">
+      <a href="/{{ finished.url }}" target="_blank">
         <h4 class="font-weight-bold">{{ finished.title }}</h4>
       </a>
     </div>
@@ -22,7 +22,7 @@
   </div>
   <div class="row">
     <div class="col">
-      <img src="{{ finished.image }}" height=200, width=150 class="img-thumbnail">
+      <img src="/{{ finished.image }}" height=200, width=150 class="img-thumbnail">
     </div>
     <div class="col-10">
       {{ finished.description }}
